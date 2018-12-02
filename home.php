@@ -9,9 +9,16 @@
 <?php
 include 'connectdb.php';
 ?>
+<h1>Q1:</h1>
+Select a Customers:
+<form action = "" method="post">
+  <select name="pickaCutomer" id="pickaCutomer">
+    <option value="1"> Select here</option>
 <?php
 include 'getCustomers.php';
 ?>
+</select>
+</form>
 
 </body>
 </html>
