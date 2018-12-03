@@ -21,12 +21,6 @@ include 'getCustomers.php';
 </select>
 </form>
 <hr>
-<?php
-// if (isset($_POST['pickaCustomer'])) {
-  include 'connectdb.php';
-  include 'getdescription.php';
-//}
- ?>
 <hr>
 </body>
 </html>
