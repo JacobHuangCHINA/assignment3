@@ -6,7 +6,6 @@ $result = mysqli_query($connection, $query);
  if (!$result) {
  die("databases query on art pieces failed. ");
  }
- echo "hell"
  echo "<ul>"; //put the artwork in an unordered bulleted list
  while ($row = mysqli_fetch_assoc($result)) {
    echo "Bought";
