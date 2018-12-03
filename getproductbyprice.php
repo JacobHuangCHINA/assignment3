@@ -11,7 +11,7 @@ include 'connectdb.php';
 <ol>
 <?php
    $orderByPrice= $_POST["price"];
-
+   echo $orderByPrice;
    if ($orderByPrice == "ASC") {
      // code...
      $query = 'SELECT * FROM Products ORDER BY Cost ASC';
