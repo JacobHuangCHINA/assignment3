@@ -16,12 +16,7 @@ Select a Customers:
 include 'getCustomers.php';
 ?>
 <input type="submit" value="submit">
-<?php
-if (isset($_POST['value'])) {
-  include 'connectdb.php';
-  include 'getdescription.php';
-}
-?>
+
 </form>
 <hr>
 
