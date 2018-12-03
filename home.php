@@ -22,10 +22,10 @@ include 'getCustomers.php';
 </form>
 <hr>
 <?php
-if (isset($_POST['pickaCustomer'])) {
+// if (isset($_POST['pickaCustomer'])) {
   include 'connectdb.php';
   include 'getdescription.php';
-}
+//}
  ?>
 <hr>
 </body>
