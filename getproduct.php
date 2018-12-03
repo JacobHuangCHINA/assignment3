@@ -15,15 +15,15 @@ include 'connectdb.php';
    $query1 = 'SELECT * FROM Products ORDER BY Cost '.$orederByPrice.'';
    $query2 = 'SELECT * FROM Products ORDER BY Description '.$orederByDescription.'';
    //$query = 'SELECT * FROM owner, pet WHERE pet.ownerid=owner.ownerid AND pet.ownerid="' . $whichOwner . '"';
-   $result1=mysqli_query($connection,$query1);
-    if (!$result1) {
+   $result=mysqli_query($connection,$query1);
+    if (!$result) {
          die("database query2 failed.");
      }
     while ($row=mysqli_fetch_assoc($result)) {
         echo $row["ProductID"]. " " .$row["Description"]. " " .$row["Cost"]. " " .$row["Quantity"]. " ";
-        echo "<br>";
      }
-     mysqli_free_result($result1);
+     mysqli_free_result($result);
+
 
 ?>
 </ol>
