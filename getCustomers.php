@@ -7,7 +7,7 @@ if (!$result) {
 echo "<ol>";
 while ($row = mysqli_fetch_assoc($result)) {
   echo "<option value='";
-  echo $row["CustomerID"]."'>";
+  echo $row["LastName"]."'>";
   echo $row["LastName"];
   echo "</option>";
 }
