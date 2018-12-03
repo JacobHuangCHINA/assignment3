@@ -1,10 +1,4 @@
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title></title>
-  </head>
-  <body>
+
     <?php
     $query = "SELECT * FROM Customers ORDER BY LastName ASC;";
     $result = mysqli_query($connection,$query);
@@ -20,5 +14,3 @@
     }
     mysqli_free_result($result);
     ?>
-  </body>
-</html>
