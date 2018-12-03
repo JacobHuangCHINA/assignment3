@@ -12,7 +12,7 @@ include 'connectdb.php';
 <h1>Q1:</h1>
 Select a Customers:
 <form action = "" method="post">
-  <select name="pickaCutomer" id="pickaCutomer">
+  <select name="pickaCustomer" id="pickaCustomer">
     <option value="1"> Select here</option>
 <?php
 include 'getCustomers.php';
