@@ -18,7 +18,7 @@ include 'connectdb.php';
    }else{
      $query = 'SELECT * FROM Products ORDER BY Cost DESC';
    }
-
+   echo $query;
    //$query = 'SELECT * FROM owner, pet WHERE pet.ownerid=owner.ownerid AND pet.ownerid="' . $whichOwner . '"';
    $result=mysqli_query($connection,$query);
     if (!$result) {
