@@ -16,7 +16,6 @@ Select a Customers:
 include 'getCustomers.php';
 ?>
 <input type="submit" value="submit">
-
 </form>
 <hr>
 
