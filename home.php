@@ -11,9 +11,9 @@ include 'connectdb.php';
 ?>
 <h1>Q1:</h1>
 Select a Customers:
-<form action="" method="post">
-  <select name="pickaCustomer" id="pickaCustomer">
-    <option value="1"> Select here</option>
+<form action="getCustomers.php" method="post">
+  <input type="radio" name="pickaCustomer" id="pickaCustomer">
+  
 <?php
 include 'getCustomers.php';
 ?>
@@ -21,9 +21,10 @@ include 'getCustomers.php';
 </select>
 </form>
 <hr>
+
 <?php
-  include 'connectdb.php';
 if (isset($_POST['pickaCustomer'])) {
+  include 'connectdb.php';
   include 'getdescription.php';
 }
 ?>
