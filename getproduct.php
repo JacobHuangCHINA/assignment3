@@ -12,7 +12,7 @@ include 'connectdb.php';
 <?php
    $orderByPrice= $_POST["price"];
    $orderByDescription= $_POST["description"];
-   $query1 = 'SELECT * FROM Products ORDER BY Cost '.$orderByPrice.'';
+   $query1 = 'SELECT * FROM Products ORDER BY Cost ".$orderByPrice."';
    $query2 = 'SELECT * FROM Products ORDER BY Description '.$orederByDescription.'';
    //$query = 'SELECT * FROM owner, pet WHERE pet.ownerid=owner.ownerid AND pet.ownerid="' . $whichOwner . '"';
    $result=mysqli_query($connection,$query1);
