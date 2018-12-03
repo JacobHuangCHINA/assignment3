@@ -11,7 +11,7 @@ include 'connectdb.php';
 ?>
 <h1>Q1:</h1>
 Select a Customers:
-<form action="getdescription" method="post">
+<form action="getdescription.php" method="post">
 <?php
 include 'getCustomers.php';
 ?>
