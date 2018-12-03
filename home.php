@@ -23,6 +23,7 @@ include 'getCustomers.php';
 <hr>
 <?php
 if (isset($_POST['pickaCustomer'])) {
+  include 'connectdb.php';
   include 'getdescription.php';
 }
 ?>
