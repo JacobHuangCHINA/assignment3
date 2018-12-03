@@ -22,8 +22,8 @@ include 'getCustomers.php';
 </form>
 <hr>
 <?php
-if (isset($_POST['pickaCustomer'])) {
   include 'connectdb.php';
+if (isset($_POST['pickaCustomer'])) {
   include 'getdescription.php';
 }
 ?>
