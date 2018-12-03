@@ -12,15 +12,11 @@ include 'connectdb.php';
 <h1>Q1:</h1>
 Select a Customers:
 <form action="getCustomers.php" method="post">
-
-<?php
-include 'getCustomers.php';
-?>
-
-<input type="submit" value="get a customer's purchase">
+<input type="submit">
 <?php
 if (isset($_POST['pickaCustomer'])) {
   include 'connectdb.php';
+  include 'getCustomers.php';
   include 'getdescription.php';
 }
 ?>
