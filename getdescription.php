@@ -1,5 +1,5 @@
 <?php
-//$whichCus = $_POST["pickaCustomer"]; //get selected museum value from the form
+$whichCus = $_POST["pickaCustomer"]; //get selected museum value from the form
 echo $whichCus;
 $query = "SELECT description FROM Products WHERE ProductID IN (SELECT ProductID FROM Purchase WHERE CustomerID = (SELECT CustomerID FROM Customers WHERE LastName = ".$whichCus."));"; //fill in with correct query
 //$query = "SELECT LastName FROM Customers ORDER BY LastName ASC;";
