@@ -17,6 +17,7 @@ Select a Customers:
 include 'getCustomers.php';
 ?>
 <input type="submit" value="get a customer's purchase">
+
 <?php
 if (isset($_POST['Customer'])) {
   include 'connectdb.php';
