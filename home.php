@@ -17,15 +17,11 @@ Select a Customers:
 <?php
 include 'getCustomers.php';
 ?>
+<input type="submit" value="get a customer's purchase">
 </select>
 </form>
 <hr>
-<?php
-  if (isset($_POST['pickaCustomer'])) {
-    include "connectdb.php";
-    include "getdescription.php";
-  }
- ?>
+
 <hr>
 </body>
 </html>
