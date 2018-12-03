@@ -1,6 +1,6 @@
 <?php
 $whichCus = $_POST["pickaCustomer"]; //get selected museum value from the form
-$query = "SELECT description from Products where ProductID in (select ProductID from Purchase where CustomerID = (select CustomerID from Customers where LastName = '".$whichCus."'));"; //fill in with correct query
+$query = "SELECT description FROM Products WHERE ProductID IN (SELECT ProductID FROM Purchase WHERE CustomerID = (SELECT CustomerID FROM Customers WHERE LastName = '".$whichCus."'));"; //fill in with correct query
 echo $query;
 $result = mysqli_query($connection, $query);
  if (!$result) {
