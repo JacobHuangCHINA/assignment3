@@ -12,8 +12,6 @@ include 'connectdb.php';
 <h1>Q1:</h1>
 Select a Customers:
 <form action="getCustomers.php" method="post">
-  <input type="radio" name="pickaCustomer" id="pickaCustomer">
-  
 <?php
 include 'getCustomers.php';
 ?>
