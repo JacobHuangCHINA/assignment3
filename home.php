@@ -20,13 +20,13 @@ include 'getCustomers.php';
 <hr>
 <h4>Q2:</h4>
 List Products
-<form action="getproduct.php">
+<form action="getproductbyprice.php">
   Oreder by Price:<br>
   <input type="radio" name="price" value="ASC"> Ascending<br>
   <input type="radio" name="price" value="DESC"> Descending<br>
   <input type="submit" value="Submit">
 </form>
-<form action="getproduct.php">
+<form action="getproductbydescription.php">
   Oreder by description:<br>
   <input type="radio" name="description" value="ASC"> Ascending<br>
   <input type="radio" name="description" value="DESC"> Descending<br>
