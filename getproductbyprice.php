@@ -12,23 +12,22 @@ include 'connectdb.php';
 <?php
    $orderByPrice= $_POST["price"];
    echo $orderByPrice;
-   echo "asdfasdf";
-   // if ($orderByPrice == "ASC") {
-   //   // code...
-   //   $query = 'SELECT * FROM Products ORDER BY Cost ASC';
-   // }else{
-   //   $query = 'SELECT * FROM Products ORDER BY Cost DESC';
-   // }
-   //
-   // //$query = 'SELECT * FROM owner, pet WHERE pet.ownerid=owner.ownerid AND pet.ownerid="' . $whichOwner . '"';
-   // $result=mysqli_query($connection,$query);
-   //  if (!$result) {
-   //       die("database query2 failed.");
-   //   }
-   //  while ($row=mysqli_fetch_assoc($result)) {
-   //      echo $row["ProductID"]. " " .$row["Description"]. " " .$row["Cost"]. " " .$row["Quantity"]. "<br>";
-   //   }
-   //   mysqli_free_result($result);
+   if ($orderByPrice == "ASC") {
+     // code...
+     $query = 'SELECT * FROM Products ORDER BY Cost ASC';
+   }else{
+     $query = 'SELECT * FROM Products ORDER BY Cost DESC';
+   }
+
+   //$query = 'SELECT * FROM owner, pet WHERE pet.ownerid=owner.ownerid AND pet.ownerid="' . $whichOwner . '"';
+   $result=mysqli_query($connection,$query);
+    if (!$result) {
+         die("database query2 failed.");
+     }
+    while ($row=mysqli_fetch_assoc($result)) {
+        echo $row["ProductID"]. " " .$row["Description"]. " " .$row["Cost"]. " " .$row["Quantity"]. "<br>";
+     }
+     mysqli_free_result($result);
 
 
 ?>
