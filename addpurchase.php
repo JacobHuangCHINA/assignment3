@@ -47,7 +47,10 @@ include 'connectdb.php';
      if ($quantity<$Max) {
        echo "Please add more, the lower bound is " .$Max. "<br>";
      }else{
-       $query2 = "INSERT INTO Purchase (CustomerID, ProductID, Quantity) VALUES ('.$customerId.', '. $productID.', '.$quantity.')";
+       if (condition) {
+         // code...
+       }
+       $query2 = 'INSERT INTO Purchase VALUES ("'.$customerId.', '. $productID.', '.$quantity.'")';
        if (!mysqli_query($connection,$query2)) {
          die("Error: insert failed" . mysqli_error($connection));
        }
