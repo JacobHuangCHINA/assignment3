@@ -23,14 +23,12 @@ include 'connectdb.php';
    echo "<br>";
    // get product ID
    $query0 = 'SELECT ProductID FROM Products WHERE description = "'.$productDescription.'";';
-   echo $query0;
    $result0=mysqli_query($connection,$query0);
     if (!$result0) {
          die("database query0 failed.");
      }
      $row=mysqli_fetch_assoc($result0);
      $productID = $row["ProductID"];
-     echo $productID;
      mysqli_free_result($result0);
 
   // get min purchase
@@ -41,18 +39,17 @@ include 'connectdb.php';
      }
      $row=mysqli_fetch_assoc($result1);
      $Max = $row["Quantity"];
-     echo $row["Quantity"];
      mysqli_free_result($result1);
 
      if ($Max>0) {
        echo "<br>";
        echo "Update Purchase quantity column<br>";
        $quantity = $Max + $quantity;
-       echo $quantity;
-       // $query2 = 'INSERT INTO Purchase VALUES ("'.$customerId.' "," '. $productID.' "," '.$quantity.'")';
-       // if (!mysqli_query($connection,$query2)) {
-       //   die("Error: insert failed" . mysqli_error($connection));
-       // }
+       $query2 = 'UPDATE Purchase SET Quantity = '.$quantity.' WHERE CustomerID = '.$customerId.' AND '. $productID.' ';
+        // 'INSERT INTO Purchase VALUES ("'.$customerId.' "," '. $productID.' "," '.$quantity.'")';
+       if (!mysqli_query($connection,$query2)) {
+         die("Error: insert failed" . mysqli_error($connection));
+       }
      }else{
        $query2 = 'INSERT INTO Purchase VALUES ("'.$customerId.' "," '. $productID.' "," '.$quantity.'")';
        if (!mysqli_query($connection,$query2)) {
