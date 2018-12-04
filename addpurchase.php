@@ -21,18 +21,14 @@ include 'connectdb.php';
    echo "Number of item: <br>";
    echo $quantity;
    echo "<br>";
-   $query = 'SELECT Quantity FROM Purchase WHERE CustomerID = 14 AND ProductID = 66;';
+   $query = 'SELECT Quantity FROM Purchase WHERE CustomerID = "' . $customerId . '" AND ProductID = 66;';
    $result=mysqli_query($connection,$query);
     if (!$result) {
          die("database query2 failed.");
      }
      $row=mysqli_fetch_assoc($result);
-echo "string";
+
      echo $row["Quantity"];
-    // while ($row=mysqli_fetch_assoc($result)) {
-    //     echo "sadf";
-    //     echo $row["Quantity"];
-    //  }
      mysqli_free_result($result);
 ?>
 
