@@ -50,7 +50,7 @@ include 'connectdb.php';
        if (condition) {
          // code...
        }
-       $query2 = 'INSERT INTO Purchase VALUES ("'.$customerId.', '. $productID.', '.$quantity.'")';
+       $query2 = 'INSERT INTO Purchase VALUES ("'.$customerId.' "," '. $productID.' "," '.$quantity.'")';
        if (!mysqli_query($connection,$query2)) {
          die("Error: insert failed" . mysqli_error($connection));
        }
