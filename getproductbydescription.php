@@ -11,7 +11,7 @@ include 'connectdb.php';
 <ol>
 <?php
    $orderByDescription= $_POST["description"];
-   echo $orderByDescription;
+   //echo $orderByDescription;
    if ($orderByDescription == "ASC") {
      // code...
         $query = 'SELECT * FROM Products ORDER BY Description ASC';

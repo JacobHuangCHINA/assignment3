@@ -9,8 +9,7 @@
 <?php
 include 'connectdb.php';
 ?>
-<h4>Q1:</h4>
-Select a Customers:
+<h4>Q1: Select a Customers</h4>
 <form action="getdescription.php" method="post">
 <?php
 include 'getCustomers.php';
@@ -18,8 +17,7 @@ include 'getCustomers.php';
 <input type="submit" value="submit">
 </form>
 <hr>
-<h4>Q2:</h4>
-List Products
+<h4>Q2: List Products </h4>
 <form action="getproductbyprice.php" method="post">
   Oreder by Price:<br>
   <input type="radio" name="price" value="ASC"> Ascending<br>
@@ -33,7 +31,18 @@ List Products
   <input type="submit" value="Submit">
 </form>
 <hr>
-
+<h4>Q3: Add new Purchase</h4>
+<form action="addpurchase.php" method="post">
+  <p>Choose a Customer:</p>
+  <?php
+    include "getcustomerid.php";
+  ?>
+  <p>Choose a product:</p>
+  <?php
+    include "getproduct.php"
+  ?>
+  Enter the number of item you want to add:
+</form>
 
 <hr>
 </body>

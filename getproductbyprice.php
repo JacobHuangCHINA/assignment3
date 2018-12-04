@@ -11,14 +11,14 @@ include 'connectdb.php';
 <ol>
 <?php
    $orderByPrice= $_POST["price"];
-   echo $orderByPrice;
+   //echo $orderByPrice;
    if ($orderByPrice == "ASC") {
      // code...
      $query = 'SELECT * FROM Products ORDER BY Cost ASC';
    }else{
      $query = 'SELECT * FROM Products ORDER BY Cost DESC';
    }
-   echo $query;
+   //echo $query;
    //$query = 'SELECT * FROM owner, pet WHERE pet.ownerid=owner.ownerid AND pet.ownerid="' . $whichOwner . '"';
    $result=mysqli_query($connection,$query);
     if (!$result) {
