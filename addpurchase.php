@@ -7,7 +7,7 @@
 <?php
 include 'connectdb.php';
 ?>
-<ol>
+<h1>asdfasdf</h1>
 <?php
    $customerId= $_POST["Customers"];
    $productDescription= $_POST["description"];
@@ -28,7 +28,7 @@ include 'connectdb.php';
    //   }
    //   mysqli_free_result($result);
 ?>
-</ol>
+
 <?php
    mysqli_close($connection);
 ?>
