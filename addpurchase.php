@@ -26,11 +26,13 @@ include 'connectdb.php';
     if (!$result) {
          die("database query2 failed.");
      }
-
-    while ($row=mysqli_fetch_assoc($result)) {
-        echo "sadf";
-        echo $row["Quantity"];
-     }
+     $row=mysqli_fetch_assoc($result)
+echo "string";
+     echo $row["Quantity"];
+    // while ($row=mysqli_fetch_assoc($result)) {
+    //     echo "sadf";
+    //     echo $row["Quantity"];
+    //  }
      mysqli_free_result($result);
 ?>
 
