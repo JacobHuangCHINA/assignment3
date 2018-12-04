@@ -23,6 +23,7 @@ include 'connectdb.php';
    echo "<br>";
    // get product ID
    $query0 = 'SELECT ProductID FROM Products WHERE description = "'.$productDescription.'";';
+   echo $query0;
    $result0=mysqli_query($connection,$query);
     if (!$result0) {
          die("database query0 failed.");
