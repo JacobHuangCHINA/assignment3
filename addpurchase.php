@@ -25,7 +25,7 @@ include 'connectdb.php';
    $query0 = 'SELECT ProductID FROM Products WHERE description = "'.$productDescription.'";';
    $result0=mysqli_query($connection,$query);
     if (!$result0) {
-         die("database query2 failed.");
+         die("database query0 failed.");
      }
      $row=mysqli_fetch_assoc($result0);
      $productID = $row["ProductID"];
@@ -36,7 +36,7 @@ include 'connectdb.php';
    $query1 = 'SELECT Quantity FROM Purchase WHERE CustomerID = ' . $customerId . ' AND ProductID = '.$productID.';';
    $result1=mysqli_query($connection,$query);
     if (!$result1) {
-         die("database query2 failed.");
+         die("database query1 failed.");
      }
      $row=mysqli_fetch_assoc($result);
      $Max = $row["Quantity"];
