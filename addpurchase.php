@@ -24,7 +24,7 @@ include 'connectdb.php';
    // get product ID
    $query0 = 'SELECT ProductID FROM Products WHERE description = "'.$productDescription.'";';
    echo $query0;
-   $result0=mysqli_query($connection,$query);
+   $result0=mysqli_query($connection,$query0);
     if (!$result0) {
          die("database query0 failed.");
      }
@@ -35,7 +35,7 @@ include 'connectdb.php';
 
   // get min purchase
    $query1 = 'SELECT Quantity FROM Purchase WHERE CustomerID = ' . $customerId . ' AND ProductID = '.$productID.';';
-   $result1=mysqli_query($connection,$query);
+   $result1=mysqli_query($connection,$query1);
     if (!$result1) {
          die("database query1 failed.");
      }
