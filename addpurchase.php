@@ -45,23 +45,17 @@ include 'connectdb.php';
      mysqli_free_result($result1);
 
      if ($quantity<$Max) {
-       echo "Please add more, the lowen bound is " .$Max. "<br>";
+       echo "Please add more, the lower bound is " .$Max. "<br>";
      }else{
-       echo "Add item successed!";
-       // $query2 = 'SELECT Quantity FROM Purchase WHERE CustomerID = "' . $customerId . '" AND ProductID = 66;';
-       // $result2=mysqli_query($connection,$query);
-       //  if (!$result2) {
-       //       die("database query2 failed.");
-       //   }
-       //   $row=mysqli_fetch_assoc($result);
-       //   $Max = $row["Quantity"];
-       //   echo $row["Quantity"];
-       //   mysqli_free_result($result);
+       $query2 = "INSERT INTO Purchase (CustomerID, PurchaseID, Quantity) VALUES ('.$customerId.', '. $productID.', '.$quantity.')";
+       if (!mysqli_query($connection,$query2)) {
+         die("Error: insert failed" . mysqli_error($connection));
+       }
+       echo "Your Purchase was added!";
      }
+     mysqli_close($connection);
 ?>
 
-<?php
-   mysqli_close($connection);
-?>
+
 </body>
 </html>
