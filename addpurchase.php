@@ -38,10 +38,10 @@ include 'connectdb.php';
     if (!$result1) {
          die("database query1 failed.");
      }
-     $row=mysqli_fetch_assoc($result);
+     $row=mysqli_fetch_assoc($result1);
      $Max = $row["Quantity"];
      echo $row["Quantity"];
-     mysqli_free_result($result);
+     mysqli_free_result($result1);
 
      if ($quantity<$Max) {
        echo "Please add more, the lowen bound is " .$Max. "<br>";
