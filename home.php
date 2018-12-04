@@ -44,7 +44,21 @@ include 'getCustomers.php';
   Enter the number of item you want to add:<input name='quantity' type='number' min="0">
   <input type="submit" value="Submit">
 </form>
-
+<hr>
+<h4>Q4: Insert a Customer</h4>
+<form action="insertcustomer.php" method="post">
+  First Name:
+  <input type="text" name="firstname" >
+  Last Name:
+  <input type="text" name="lastname" >
+  City:
+  <input type="text" name="city" >
+  Phone Number(Format: ###-####):
+  <input type="text" name="phonenumber" >
+  Select an Agent:
+  <?php include "getagent.php" ?>
+  <input type="submit">
+</form>
 <hr>
 </body>
 </html>
