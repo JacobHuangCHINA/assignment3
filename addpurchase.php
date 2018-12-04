@@ -45,7 +45,14 @@ include 'connectdb.php';
      mysqli_free_result($result1);
 
      if ($Max>0) {
-       echo "exist";
+       echo "<br>";
+       echo "Update Purchase quantity column<br>";
+       $quantity = $Max + $quantity;
+       echo $quantity;
+       // $query2 = 'INSERT INTO Purchase VALUES ("'.$customerId.' "," '. $productID.' "," '.$quantity.'")';
+       // if (!mysqli_query($connection,$query2)) {
+       //   die("Error: insert failed" . mysqli_error($connection));
+       // }
      }else{
        $query2 = 'INSERT INTO Purchase VALUES ("'.$customerId.' "," '. $productID.' "," '.$quantity.'")';
        if (!mysqli_query($connection,$query2)) {
