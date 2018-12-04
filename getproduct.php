@@ -7,7 +7,6 @@
     }
 
     while ($row = mysqli_fetch_assoc($result)) {
-
       echo "<input type='radio' name='description' value='";
       echo $row["description"]."'>";
       echo $row["description"];
