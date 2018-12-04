@@ -42,7 +42,7 @@ include 'getCustomers.php';
     include "getproduct.php"
   ?>
   Enter the number of item you want to add:
-  <?php inclue "getMaxQuantity.php"; ?>
+  <?php include "getMaxQuantity.php"; ?>
   <input type="submit" value="Submit">
 </form>
 
