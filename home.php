@@ -47,14 +47,14 @@ include 'getCustomers.php';
 <hr>
 <h4>Q4: Insert a Customer</h4>
 <form action="insertcustomer.php" method="post">
-  First Name:
-  <input type="text" name="firstname" >
+  First Name:<>
+  <input type="text" name="firstname" ><br>
   Last Name:
-  <input type="text" name="lastname" >
+  <input type="text" name="lastname" ><br>
   City:
-  <input type="text" name="city" >
+  <input type="text" name="city" ><br>
   Phone Number(Format: ###-####):
-  <input type="text" name="phonenumber" >
+  <input type="text" name="phonenumber" ><br>
   Select an Agent:
   <?php include "getagent.php" ?>
   <input type="submit">

@@ -8,7 +8,7 @@ if (!$result) {
 while ($row = mysqli_fetch_assoc($result)) {
   echo "<input type='radio' name='Agent' value='";
   echo $row["AgentID"]."'>";
-  echo $row["FirstName"] " " .$row["LastName"]. " " .$row["AgentID"]. " ";
+  echo $row["FirstName"]. " " .$row["LastName"]. " " .$row["AgentID"]. " ";
   echo "<br>";
 }
 mysqli_free_result($result);
