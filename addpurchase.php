@@ -21,15 +21,42 @@ include 'connectdb.php';
    echo "Number of item: <br>";
    echo $quantity;
    echo "<br>";
-   $query = 'SELECT Quantity FROM Purchase WHERE CustomerID = "' . $customerId . '" AND ProductID = 66;';
-   $result=mysqli_query($connection,$query);
-    if (!$result) {
+   // get product ID
+   $query0 = 'SELECT ProductID FROM Products WHERE description = "'.$productDescription.'";';
+   $result0=mysqli_query($connection,$query);
+    if (!$result0) {
+         die("database query2 failed.");
+     }
+     $row=mysqli_fetch_assoc($result0);
+     $productID = $row["ProductID"];
+     echo $productID;
+     mysqli_free_result($result0);
+
+  // get min purchase
+   $query1 = 'SELECT Quantity FROM Purchase WHERE CustomerID = ' . $customerId . ' AND ProductID = '.$productID.';';
+   $result1=mysqli_query($connection,$query);
+    if (!$result1) {
          die("database query2 failed.");
      }
      $row=mysqli_fetch_assoc($result);
-
+     $Max = $row["Quantity"];
      echo $row["Quantity"];
      mysqli_free_result($result);
+
+     if ($quantity<$Max) {
+       echo "Please add more, the lowen bound is " .$Max. "<br>";
+     }else{
+       echo "Add item successed!";
+       // $query2 = 'SELECT Quantity FROM Purchase WHERE CustomerID = "' . $customerId . '" AND ProductID = 66;';
+       // $result2=mysqli_query($connection,$query);
+       //  if (!$result2) {
+       //       die("database query2 failed.");
+       //   }
+       //   $row=mysqli_fetch_assoc($result);
+       //   $Max = $row["Quantity"];
+       //   echo $row["Quantity"];
+       //   mysqli_free_result($result);
+     }
 ?>
 
 <?php
