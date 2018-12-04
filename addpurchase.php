@@ -26,7 +26,7 @@ include 'connectdb.php';
     if (!$result) {
          die("database query2 failed.");
      }
-     $row=mysqli_fetch_assoc($result)
+     $row=mysqli_fetch_assoc($result);
 echo "string";
      echo $row["Quantity"];
     // while ($row=mysqli_fetch_assoc($result)) {
