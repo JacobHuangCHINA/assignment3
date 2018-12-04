@@ -1,5 +1,5 @@
 <?php
-$customerId = $_POST["Customers"];
+$customerId = intval($_POST["Customers"]);
 $productDescription= $_POST["description"];
 $query = 'SELECT MAX(Quantity) FROM Purchase WHERE CustomerID = '.$customerId.' AND ProductID = '.$productDescription.'';
 echo "----";
