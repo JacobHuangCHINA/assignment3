@@ -22,8 +22,9 @@ include 'connectdb.php';
      if (!$result0) {
           die("database query1 failed.");
       }
-      $row=mysqli_fetch_assoc($result0);
-      $Max = $row["CustomerID"];
+      while ($row = mysqli_fetch_assoc($result)) {
+        echo $row["CustomerID"];;
+      }
       mysqli_free_result($result0);
 
   // // get min purchase
