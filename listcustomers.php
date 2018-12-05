@@ -10,7 +10,7 @@
       $quantity = $_POST["quantity"];
       echo $quantity;
       echo "string";
-      $query = "SELECT FirstName, LastName FROM Customers";
+      $query = "SELECT * FROM Customers";
       echo $query;
       $result = mysqli_query($connection,$query);
       if (!$result) {
