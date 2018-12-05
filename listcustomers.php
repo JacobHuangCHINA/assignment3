@@ -9,8 +9,9 @@
       <?php
       $quantity = $_Post["numofitem"];
       echo $quantity;
-      $query = 'SELECT Customers.FirstName as FistName,Customers.LastName as LastName,Purchase.CustomerID,Purchase.ProductID,Products.Description as Description FROM Purchase,Products,Customers WHERE Purchase.Quantity > '.$quantity.' AND Purchase.ProductID = Products.ProductID AND Customers.CustomerID = Purchase.CustomerID;';
-
+      echo "string";
+      $query = 'SELECT Customers.FirstName,Customers.LastName,Purchase.CustomerID,Purchase.ProductID,Products.Description FROM Purchase,Products,Customers WHERE Purchase.Quantity > '.$quantity.' AND Purchase.ProductID = Products.ProductID AND Customers.CustomerID = Purchase.CustomerID;';
+echo $query;
       $result = mysqli_query($connection,$query);
       if (!$result) {
          die("databases query failed.");
