@@ -11,7 +11,7 @@
       <?php
        $produtID = $_POST["productnumber"];
        echo $produtID;
-        $query = 'SELECT "'.$productID.'" FROM Products;';
+        $query = 'SELECT * FROM Products WHERE ProductID = "'.$productID.'";';
         echo $query;
         $result = mysqli_query($connection,$query);
         if (!$result) {
