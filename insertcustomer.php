@@ -22,7 +22,7 @@ include 'connectdb.php';
      if (!$result0) {
           die("database query1 failed.");
       }
-    while ($row = mysqli_fetch_assoc($result)) {
+    while ($row = mysqli_fetch_assoc($result0)) {
 
         echo $row["CustomerID"];
         echo "<br>";
