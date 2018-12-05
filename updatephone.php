@@ -8,10 +8,12 @@
 include 'connectdb.php';
 ?>
 <?php
-   $customerId= (string)$_POST["Customers"];
+   $customerId= intval($_POST["Customers"]);
    $newphoneNum = (string)$_POST["newphone"];
-   echo $customerId;
-   echo $newphoneNum;
+   if ($customerId == 12) {
+     // code...
+     echo "string";
+   }
 
   // get min purchase
    $query1 = "UPDATE Customers SET PHONENUM='.$newphoneNum.' WHERE CustomerID='.$customerId.'";
