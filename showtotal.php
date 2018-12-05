@@ -16,7 +16,7 @@
            die("databases query failed.");
         }
 
-        $row = mysqli_fetch_assoc($result)
+        $row = mysqli_fetch_assoc($result);
           $total = $row["Cost"] * $row["Quantity"];
           echo $total;
           echo $row["Quantity"]. " " .$row["Description"]. " " ;
