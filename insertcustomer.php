@@ -22,16 +22,19 @@ include 'connectdb.php';
       die("databases query0 failed.");
    }
    $row = mysqli_fetch_assoc($result0);
+   echo $row;
+   $row++;
    $customerId = $row + 1;
+   echo $customerId;
    mysqli_free_result($result0);
 
-  // get min purchase
-   $query1 = 'INSERT INTO Customers VALUES ("'.$customerId.' "," "'.$firstName.' "," '. $lastName.' "," '.$city.'" "," '.$angentId.'")';
-   if (!mysqli_query($connection,$query1)) {
-     die("Error: insert failed" . mysqli_error($connection));
-   }
-   echo "Your Purchase was added!";
-   mysqli_close($connection);
+  // // get min purchase
+  //  $query1 = 'INSERT INTO Customers VALUES ("'.$customerId.' "," "'.$firstName.' "," '. $lastName.' "," '.$city.'" "," '.$angentId.'")';
+  //  if (!mysqli_query($connection,$query1)) {
+  //    die("Error: insert failed" . mysqli_error($connection));
+  //  }
+  //  echo "Your Purchase was added!";
+  //  mysqli_close($connection);
 
 
 ?>

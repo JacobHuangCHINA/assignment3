@@ -47,7 +47,7 @@ include 'getCustomers.php';
 <hr>
 <h4>Q4: Insert a Customer</h4>
 <form action="insertcustomer.php" method="post">
-  First Name:<>
+  First Name:
   <input type="text" name="firstname" ><br>
   Last Name:
   <input type="text" name="lastname" ><br>
