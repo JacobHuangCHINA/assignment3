@@ -45,7 +45,7 @@ include 'connectdb.php';
        echo "<br>";
        echo "Update Purchase quantity column<br>";
        $quantity = $Max + $quantity;
-       $query2 = 'UPDATE Purchase SET Quantity = '.$quantity.' WHERE CustomerID = '.$customerId.' AND '. $productID.' ';
+       $query2 = "UPDATE Purchase SET Quantity = '.$quantity.' WHERE CustomerID = '.$customerId.' AND '. $productID.' ";
         // 'INSERT INTO Purchase VALUES ("'.$customerId.' "," '. $productID.' "," '.$quantity.'")';
        if (!mysqli_query($connection,$query2)) {
          die("Error: insert failed" . mysqli_error($connection));

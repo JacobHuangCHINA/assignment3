@@ -15,23 +15,9 @@ include 'connectdb.php';
    $angentId = $_POST["Agent"];
    $city= $_POST["city"];
 
-   // increase customer ID
-   // // get min purchase
-   //  $query0 = 'SELECT min(CustomerID) FROM Customers;';
-   //  $result0 = mysqli_query($connection,$query0);
-   //   if (!$result0) {
-   //        die("database query1 failed.");
-   //    }
-   //  while ($row = mysqli_fetch_assoc($result0)) {
-   //
-   //      echo $row["CustomerID"];
-   //      echo "<br>";
-   //  }
    $customerId = 32;
    $customerId++;
-echo $angentId;
    $newangentId = (string)$angentId;
-   echo $newangentId;
   // get min purchase
    $query1 = 'INSERT INTO Customers (CustomerID, FirstName, LastName, City, PhoneNum, AgentID) VALUES ("'.$customerId.' "," '.$firstName.' "," '. $lastName.' "," '.$city.' ","  '.$phoneNumber.' "," '.$newangentId.'")';
 //$query2 = 'INSERT INTO Purchase VALUES ("'.$customerId.' "," '. $productID.' "," '.$quantity.'")';

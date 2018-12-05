@@ -60,5 +60,13 @@ include 'getCustomers.php';
   <input type="submit">
 </form>
 <hr>
+<h4>Q5: Update phoneNumber: </h4>
+<form action="updatephone.php" method="post">
+  <?php include "getCustomers.php" ?>
+  Add new phone number:
+  <input type="text" name="newphone">
+  <input type="submit">
+</form>
+<hr>
 </body>
 </html>
