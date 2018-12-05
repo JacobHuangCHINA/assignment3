@@ -17,7 +17,7 @@ include 'connectdb.php';
 
    // increase customer ID
    // get min purchase
-    $query0 = 'SELECT * FROM Customers;';
+    $query0 = 'SELECT MAX(CustomerID) FROM Customers;';
     $result0=mysqli_query($connection,$query0);
      if (!$result0) {
           die("database query1 failed.");
