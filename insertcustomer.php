@@ -29,7 +29,8 @@ include 'connectdb.php';
    //  }
    $customerId = 32;
    $customerId++;
-   echo $customerId;
+
+   $angentId = (string)$angentId;
   // get min purchase
    $query1 = 'INSERT INTO Customers VALUES ("'.$customerId.' "," '.$firstName.' "," '. $lastName.' "," '.$city.' ","  '.$phoneNumber.' "," '.$angentId.'")';
 //$query2 = 'INSERT INTO Purchase VALUES ("'.$customerId.' "," '. $productID.' "," '.$quantity.'")';
