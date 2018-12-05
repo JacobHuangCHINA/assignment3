@@ -22,7 +22,7 @@ include 'connectdb.php';
       die("databases query0 failed.");
    }
    $row = mysqli_fetch_assoc($result0);
-   echo $row;
+   echo $row["CustomerID"];
    $customerId = intval($row["CustomerID"]) + 1;
    echo $customerId;
    mysqli_free_result($result0);
