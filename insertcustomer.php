@@ -16,13 +16,14 @@ include 'connectdb.php';
    $city= $_POST["city"];
 
    // increase customer ID
-   $query0 = "SELECT MAX(CustomerID) FROM Customers;";
+   $query0 = 'SELECT MAX(CustomerID) FROM Customers;';
    $result0 = mysqli_query($connection,$query0);
    if (!$result0) {
       die("databases query0 failed.");
    }
    $row = mysqli_fetch_assoc($result0);
    echo $row["CustomerID"];
+   echo "string";
    $customerId = intval($row["CustomerID"]) + 1;
    echo $customerId;
    mysqli_free_result($result0);
