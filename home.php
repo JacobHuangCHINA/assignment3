@@ -78,7 +78,7 @@ include 'getCustomers.php';
 <h4>Q7: List Customers: </h4>
 <form action="listcustomers.php" method="post">
   Quantity of product:
-  <input type="number" name="number" min="0">
+  <input name='quantity' type='number' min="0">
   <input type="submit">
 </form>
 <hr>
