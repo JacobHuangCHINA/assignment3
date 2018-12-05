@@ -92,7 +92,7 @@ include 'getCustomers.php';
   }
 
   while ($row = mysqli_fetch_assoc($result)) {
-    echo $row["description"];
+    echo $row["Description"];
     echo "<br>";
   }
   mysqli_free_result($result);
