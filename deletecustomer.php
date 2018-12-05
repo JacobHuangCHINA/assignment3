@@ -8,7 +8,7 @@
 include 'connectdb.php';
 ?>
 <?php
-   $customerId= $_POST["CusID"];
+   $customerId= $_POST["Customers"];
 
   // get min purchase
    $query1 = "DELETE FROM Customers WHERE CustomerID='$customerId'";

@@ -72,7 +72,7 @@ include 'getCustomers.php';
 <form action="deletecustomer.php" method="post">
   <?php include "getCustomers.php" ?>
   Choose a Customer ID number:
-  <input type="text" name="CusID">
+  
   <input type="submit">
 </form>
 <hr>
