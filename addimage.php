@@ -11,6 +11,7 @@
 <ol>
 <?php
    $whichCustomer = $_POST["Customers"];
+   $pic = $_POST["file"];
    $row=mysqli_fetch_assoc($result);
 
    $query = 'INSERT INTO Customers (cusimage) values('$pic') WHERE CustomerID = "'.$whichCustomer.'";' ;
