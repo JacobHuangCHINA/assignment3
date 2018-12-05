@@ -11,14 +11,14 @@
     <ol>
       <?php
       $quantity= $_POST["quantity"];
-      $query = 'SELECT LastName FROM Customers;' ;
+      $query = "SELECT FirstName,LastName,Description FROM Purchase,Products,Customers WHERE Purchase.Quantity > '$quantity' AND Purchase.ProductID = Products.ProductID AND Customers.CustomerID = Purchase.CustomerID;";
       $result=mysqli_query($connection,$query);
        if (!$result) {
             die("database query2 failed.");
         }
        while ($row=mysqli_fetch_assoc($result)) {
            echo '<li>';
-           echo $row["LastName"];
+           echo $row["FirstName"]. " " .$row["LastName"]. " " .$row["Description"];
         }
         mysqli_free_result($result);
        ?>
