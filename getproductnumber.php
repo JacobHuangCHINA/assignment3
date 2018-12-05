@@ -1,4 +1,6 @@
-
+<?php
+include 'connectdb.php';
+?>
   <?php
     $query = "SELECT description FROM Products;";
     $result = mysqli_query($connection,$query);
@@ -13,4 +15,7 @@
       echo "<br>";
     }
     mysqli_free_result($result);
+    ?>
+    <?php
+       mysqli_close($connection);
     ?>

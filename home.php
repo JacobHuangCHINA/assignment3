@@ -90,7 +90,8 @@ include 'getCustomers.php';
 
 <hr>
 <h4>Q9: Show total Purchase: </h4>
-<form action="getproductnumber.php" method="post">
+<form action="showtotal.php" method="post">
+  <?php include "getproductnumber.php" ?>
     <input type="submit" value="Submit">
 </form>
 
