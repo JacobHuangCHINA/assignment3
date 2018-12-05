@@ -1,5 +1,5 @@
 <?php
-$quantity = $_Post["numofitem"]
+$quantity = $_Post["numofitem"];
 echo $quantity;
 $query = 'SELECT Customers.FirstName,Customers.LastName,Purchase.CustomerID,Purchase.ProductID,Products.Description FROM Purchase,Products,Customers WHERE Purchase.Quantity > '.$quantity.' AND Purchase.ProductID = Products.ProductID AND Customers.CustomerID = Purchase.CustomerID;';
 
