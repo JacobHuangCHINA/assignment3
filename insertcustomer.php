@@ -17,12 +17,11 @@ include 'connectdb.php';
 
    // increase customer ID
    // get min purchase
-    $query0 = 'SELECT CustomerID FROM Customers;';
+    $query0 = 'SELECT min(CustomerID) FROM Customers;';
     $result0 = mysqli_query($connection,$query0);
      if (!$result0) {
           die("database query1 failed.");
       }
-    $maxid = 0;
     while ($row = mysqli_fetch_assoc($result)) {
 
         echo $row["CustomerID"];
