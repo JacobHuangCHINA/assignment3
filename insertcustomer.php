@@ -16,26 +16,27 @@ include 'connectdb.php';
    $city= $_POST["city"];
 
    // increase customer ID
-   // get min purchase
-    $query0 = 'SELECT min(CustomerID) FROM Customers;';
-    $result0 = mysqli_query($connection,$query0);
-     if (!$result0) {
-          die("database query1 failed.");
-      }
-    while ($row = mysqli_fetch_assoc($result0)) {
-
-        echo $row["CustomerID"];
-        echo "<br>";
-    }
-
-
-  // // get min purchase
-  //  $query1 = 'INSERT INTO Customers VALUES ("'.$customerId.' "," "'.$firstName.' "," '. $lastName.' "," '.$city.'" "," '.$angentId.'")';
-  //  if (!mysqli_query($connection,$query1)) {
-  //    die("Error: insert failed" . mysqli_error($connection));
-  //  }
-  //  echo "Your Purchase was added!";
-  //  mysqli_close($connection);
+   // // get min purchase
+   //  $query0 = 'SELECT min(CustomerID) FROM Customers;';
+   //  $result0 = mysqli_query($connection,$query0);
+   //   if (!$result0) {
+   //        die("database query1 failed.");
+   //    }
+   //  while ($row = mysqli_fetch_assoc($result0)) {
+   //
+   //      echo $row["CustomerID"];
+   //      echo "<br>";
+   //  }
+   $customerId = 32;
+   $customerId++;
+   echo $customerId;
+  // get min purchase
+   $query1 = 'INSERT INTO Customers VALUES ("'.$customerId.' "," "'.$firstName.' "," '. $lastName.' "," '.$city.'" "," '.$angentId.'")';
+   if (!mysqli_query($connection,$query1)) {
+     die("Error: insert failed" . mysqli_error($connection));
+   }
+   echo "Your Purchase was added!";
+   mysqli_close($connection);
 
 
 ?>
