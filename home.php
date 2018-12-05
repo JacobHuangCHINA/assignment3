@@ -70,7 +70,7 @@ include 'getCustomers.php';
 <hr>
 <h4>Q6: Delete a Customer </h4>
 <form action="deletecustomer.php" method="post">
-  Choose a Customer ID number:
+  Choose a Customer ID number:<br>
   <?php include "getCustomers.php" ?>
   <input type="submit">
 </form>
@@ -97,7 +97,6 @@ include 'getCustomers.php';
 <hr>
 <h4>Q10: Add image:</h2>
 <form action="addimage.php" method="post" enctype="multipart/form-data" >
-
 For which customer: <br>
 <?php
 include 'getCustomers.php';
