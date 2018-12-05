@@ -17,14 +17,14 @@ include 'connectdb.php';
 
    // increase customer ID
    // get min purchase
-    $query1 = 'SELECT MAX(CustomerID) FROM Customers;'
-    $result1=mysqli_query($connection,$query1);
-     if (!$result1) {
+    $query0 = 'SELECT MAX(CustomerID) FROM Customers;'
+    $result0=mysqli_query($connection,$query0);
+     if (!$result0) {
           die("database query1 failed.");
       }
-      $row=mysqli_fetch_assoc($result1);
+      $row=mysqli_fetch_assoc($result0);
       $Max = $row["CustomerID"];
-      mysqli_free_result($result1);
+      mysqli_free_result($result0);
 
   // // get min purchase
   //  $query1 = 'INSERT INTO Customers VALUES ("'.$customerId.' "," "'.$firstName.' "," '. $lastName.' "," '.$city.'" "," '.$angentId.'")';
