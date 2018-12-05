@@ -2,7 +2,7 @@
 include 'connectdb.php';
 ?>
   <?php
-    $query = "SELECT description FROM Products;";
+    $query = "SELECT * FROM Products;";
     $result = mysqli_query($connection,$query);
     if (!$result) {
        die("databases query failed.");
