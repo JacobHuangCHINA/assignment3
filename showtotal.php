@@ -9,9 +9,9 @@
     include 'connectdb.php';
     ?>
       <?php
-       $produtID = $_POST["productnumber"];
-       echo $produtID;
-        $query = 'SELECT * FROM Products WHERE ProductID = 7;';
+       $productID = $_POST["productnumber"];
+       echo $productID;
+        $query = 'SELECT * FROM Products WHERE ProductID = "' . $productID . '";';
         echo $query;
         $result = mysqli_query($connection,$query);
         if (!$result) {
@@ -20,8 +20,6 @@
 
         $row = mysqli_fetch_assoc($result);
           $total = $row["Cost"] * $row["Quantity"];
-          echo $total;
-          echo $row["Quantity"];
           echo $row["Quantity"]. " " .$row["Description"]. " " ;
           echo $total;
           echo "<br>";
