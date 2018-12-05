@@ -25,7 +25,7 @@ include 'connectdb.php';
     $maxid = 0;
     while ($row = mysqli_fetch_assoc($result)) {
       if ($row["CustomerID"]>$maxid){
-        $maxid = $row["CustomerID"]
+        $maxid = $row["CustomerID"];
       }
     }
     echo $maxid;
