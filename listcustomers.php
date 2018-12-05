@@ -10,7 +10,7 @@
       $quantity = $_POST["quantity"];
       echo $quantity;
       echo "string";
-      $query = "SELECT FirstName,LastName,Description FROM Purchase,Products,Customers WHERE Purchase.Quantity > '$quantity' AND Purchase.ProductID = Products.ProductID AND Customers.CustomerID = Purchase.CustomerID;";
+      $query = "SELECT FirstName,LastName,Description FROM Purchase,Products,Customers WHERE Purchase.Quantity > 10 AND Purchase.ProductID = Products.ProductID AND Customers.CustomerID = Purchase.CustomerID;";
       echo $query;
       $result = mysqli_query($connection,$query);
       if (!$result) {
