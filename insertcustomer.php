@@ -22,9 +22,9 @@ include 'connectdb.php';
      if (!$result0) {
           die("database query1 failed.");
       }
-      $maxid = 0;
+    $maxid = 0;
     while ($row = mysqli_fetch_assoc($result)) {
-      if ($row["CustomerID"]>$temp) {
+      if ($row["CustomerID"]>$maxid){
         $maxid = $row["CustomerID"]
       }
     }
