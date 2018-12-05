@@ -14,7 +14,7 @@ include 'connectdb.php';
    echo $newphoneNum;
 
   // get min purchase
-   $query1 = "UPDATE Customers SET PHONENUM = '.$newphoneNum.' WHERE CustomerID = '.$customerId.'";
+   $query1 = "UPDATE Customers SET 'PHONENUM' = '.$newphoneNum.' WHERE CustomerID = '.$customerId.'";
 //$query2 = 'INSERT INTO Purchase VALUES ("'.$customerId.' "," '. $productID.' "," '.$quantity.'")';
    if (!mysqli_query($connection,$query1)) {
      die("Error: insert failed" . mysqli_error($connection));
