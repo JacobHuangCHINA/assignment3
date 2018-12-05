@@ -86,6 +86,6 @@ include 'getCustomers.php';
 <?php include "listneverpurchase.php" ?>
 <hr>
 <h4>Q9: Show total Purchase: </h4>
-<?php include "" ?>
+<?php include "getproduct.php" ?>
 </body>
 </html>
