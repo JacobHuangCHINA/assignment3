@@ -23,8 +23,7 @@ include 'connectdb.php';
    }
    $row = mysqli_fetch_assoc($result0);
    echo $row;
-   $row++;
-   $customerId = $row;
+   $customerId = $row[CustomerID] + 1;
    echo $customerId;
    mysqli_free_result($result0);
 
