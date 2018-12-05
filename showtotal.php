@@ -18,7 +18,8 @@
 
         while ($row = mysqli_fetch_assoc($result)) {
           $total = $row["Cost"] * $row["Quantity"];
-          echo $row["Quantity"]. " " .$row["Description"]. " " $total " " ;
+          echo $row["Quantity"]. " " .$row["Description"]. " " ;
+          echo $total;
           echo "<br>";
         }
         mysqli_free_result($result);
