@@ -16,7 +16,7 @@ include 'connectdb.php';
    }
 
   // get min purchase
-   $query1 = "UPDATE Customers SET PHONENUM='.$newphoneNum.' WHERE CustomerID='.$customerId.'";
+   $query1 = "UPDATE Customers SET PHONENUM='$newphoneNum' WHERE CustomerID='$customerId'";
    echo $query1;
 //$query2 = 'INSERT INTO Purchase VALUES ("'.$customerId.' "," '. $productID.' "," '.$quantity.'")';
    if (!mysqli_query($connection,$query1)) {
