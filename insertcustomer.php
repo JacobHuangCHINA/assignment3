@@ -7,7 +7,7 @@
 <?php
 include 'connectdb.php';
 ?>
-<h1>Here is the info about added Purchase</h1>
+<h1>Here is the info about added Customer</h1>
 <?php
    $firstName= $_POST["firstname"];
    $lastName= $_POST["lastname"];
@@ -17,14 +17,19 @@ include 'connectdb.php';
 
    // increase customer ID
    // get min purchase
-    $query0 = 'SELECT max(CustomerID) FROM Customers;';
+    $query0 = 'SELECT CustomerID FROM Customers;';
     $result0 = mysqli_query($connection,$query0);
      if (!$result0) {
           die("database query1 failed.");
       }
-    $row = mysqli_fetch_assoc($result0);
-    $newcustomerId = intval($row["CustomerID"]) + 1;
-    echo $newcustomerId;
+      $maxid = 0;
+    while ($row = mysqli_fetch_assoc($result)) {
+      if ($row["CustomerID"]>$temp) {
+        $maxid = $row["CustomerID"]
+      }
+    }
+    echo $maxid;
+
 
   // // get min purchase
   //  $query1 = 'INSERT INTO Customers VALUES ("'.$customerId.' "," "'.$firstName.' "," '. $lastName.' "," '.$city.'" "," '.$angentId.'")';
