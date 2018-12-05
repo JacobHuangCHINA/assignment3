@@ -30,9 +30,9 @@ include 'connectdb.php';
    $customerId = 32;
    $customerId++;
 
-   $angentId = (string)$angentId;
+   $newangentId = (string)$angentId;
   // get min purchase
-   $query1 = 'INSERT INTO Customers VALUES ("'.$customerId.' "," '.$firstName.' "," '. $lastName.' "," '.$city.' ","  '.$phoneNumber.' "," '.$angentId.'")';
+   $query1 = 'INSERT INTO Customers VALUES ("'.$customerId.' "," '.$firstName.' "," '. $lastName.' "," '.$city.' ","  '.$phoneNumber.' "," '.$newangentId.'")';
 //$query2 = 'INSERT INTO Purchase VALUES ("'.$customerId.' "," '. $productID.' "," '.$quantity.'")';
    if (!mysqli_query($connection,$query1)) {
      die("Error: insert failed" . mysqli_error($connection));
