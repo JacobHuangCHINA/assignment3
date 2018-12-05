@@ -1,7 +1,7 @@
 
 <?php
     $query = "SELECT * FROM Customers;";
-    echo $query;
+
     $result = mysqli_query($connection,$query);
     if (!$result) {
        die("databases query failed.");
