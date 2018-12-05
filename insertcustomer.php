@@ -17,13 +17,13 @@ include 'connectdb.php';
 
    // increase customer ID
    // get min purchase
-    $query1 = 'SELECT Quantity FROM Purchase WHERE CustomerID = ' . $customerId . ' AND ProductID = '.$productID.';';
+    $query1 = 'SELECT MAX(CustomerID) FROM Customers;'
     $result1=mysqli_query($connection,$query1);
      if (!$result1) {
           die("database query1 failed.");
       }
       $row=mysqli_fetch_assoc($result1);
-      $Max = $row["Quantity"];
+      $Max = $row["CustomerID"];
       mysqli_free_result($result1);
 
   // // get min purchase
