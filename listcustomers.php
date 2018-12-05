@@ -6,23 +6,7 @@
   </head>
   <body>
     <ol>
-      <?php
-      $quantity = $_POST["quantity"];
-      echo $quantity;
-      echo "string";
-      $query = "SELECT * FROM Customers;";
-      echo $query;
-      $result = mysqli_query($connection,$query);
-      if (!$result) {
-         die("databases query failed.");
-      }
-      while ($row = mysqli_fetch_assoc($result)) {
-        echo "<li>";
-        echo $row["FirstName"]. " " .$row["LastName"]. " " .$row["Description"]. " ";
-
-      }
-      mysqli_free_result($result);
-       ?>
+      <li>hoeel</li>
     </ol>
   </body>
 </html>
