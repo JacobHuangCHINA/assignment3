@@ -21,7 +21,7 @@ include 'connectdb.php';
    if (!$result0) {
       die("databases query0 failed.");
    }
-   $row = mysqli_fetch_assoc($result0)
+   $row = mysqli_fetch_assoc($result0);
    $customerId = $row + 1;
    mysqli_free_result($result0);
 

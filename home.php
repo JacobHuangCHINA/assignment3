@@ -55,7 +55,7 @@ include 'getCustomers.php';
   <input type="text" name="city" ><br>
   Phone Number(Format: ###-####):
   <input type="text" name="phonenumber" ><br>
-  Select an Agent:
+  Select an Agent:<br>
   <?php include "getagent.php" ?>
   <input type="submit">
 </form>
