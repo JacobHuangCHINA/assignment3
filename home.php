@@ -68,5 +68,13 @@ include 'getCustomers.php';
   <input type="submit">
 </form>
 <hr>
+<h4>Q6: Delete a Customer </h4>
+<form action="deletecustomer.php" method="post">
+  <?php include "getCustomers.php" ?>
+  Choose a Customer ID number:
+  <input type="text" name="CusID">
+  <input type="submit">
+</form>
+<hr>
 </body>
 </html>
