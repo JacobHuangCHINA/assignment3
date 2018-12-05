@@ -9,7 +9,10 @@ include 'connectdb.php';
 ?>
 <?php
    $customerId= $_POST["customers"];
-   $newphoneNum = $_POST["newphone"];
+   $newphoneNum = (string)$_POST["newphone"];
+   echo $customerId;
+   echo $newphoneNum;
+
   // get min purchase
    $query1 = "UPDATE Customers SET PhoneNum = '.$newphoneNum.' WHERE CustomerID = '.$customerId.'";
 //$query2 = 'INSERT INTO Purchase VALUES ("'.$customerId.' "," '. $productID.' "," '.$quantity.'")';

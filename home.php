@@ -63,7 +63,7 @@ include 'getCustomers.php';
 <h4>Q5: Update phoneNumber: </h4>
 <form action="updatephone.php" method="post">
   <?php include "getCustomers.php" ?>
-  Add new phone number:
+  update new phone number:
   <input type="text" name="newphone">
   <input type="submit">
 </form>
