@@ -94,6 +94,17 @@ include 'getCustomers.php';
   <?php include "getproductnumber.php" ?>
     <input type="submit" value="Submit">
 </form>
+<hr>
+<h4>Q10: Add image:</h2>
+<form action="addimage.php" method="post" enctype="multipart/form-data" >
+
+For which customer: <br>
+<?php
+include 'getCustomers.php';
+?>
+<input type="file" name="file" id="file"><br>
+<input type="submit" value="Add New Pet">
+</form>
 
 
 </body>

@@ -27,7 +27,6 @@ include 'connectdb.php';
    echo "Your Purchase was added!";
    mysqli_close($connection);
 
-
 ?>
 </body>
 </html>
