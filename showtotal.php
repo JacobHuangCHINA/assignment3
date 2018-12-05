@@ -10,9 +10,9 @@
     ?>
       <?php
        $productID = $_POST["productnumber"];
-       echo $productID;
+
         $query = 'SELECT * FROM Products WHERE ProductID = "' . $productID . '";';
-        echo $query;
+
         $result = mysqli_query($connection,$query);
         if (!$result) {
            die("databases query failed.");
@@ -20,6 +20,7 @@
 
         $row = mysqli_fetch_assoc($result);
           $total = $row["Cost"] * $row["Quantity"];
+          echo "<h4>Total cost is: </h4><br>";
           echo $row["Quantity"]. " " .$row["Description"]. " " ;
           echo $total;
           echo "<br>";
