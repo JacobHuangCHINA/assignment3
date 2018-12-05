@@ -8,7 +8,7 @@
     <ol>
       <?php
       $quantity= $_POST["quantity"];
-      $query = 'SELECT LastName FROM Customers' ;
+      $query = 'SELECT LastName FROM Customers;' ;
       $result=mysqli_query($connection,$query);
        if (!$result) {
             die("database query2 failed.");
