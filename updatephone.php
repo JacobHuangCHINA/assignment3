@@ -8,7 +8,7 @@
 include 'connectdb.php';
 ?>
 <?php
-   $customerId= $_POST["customers"];
+   $customerId= $_POST["Customers"];
    $newphoneNum = (string)$_POST["newphone"];
    echo $customerId;
    echo $newphoneNum;
