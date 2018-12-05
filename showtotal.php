@@ -21,7 +21,7 @@
         $row = mysqli_fetch_assoc($result);
           $total = $row["Cost"] * $row["Quantity"];
           echo $total;
-          echo $row["Quantity"]
+          echo $row["Quantity"];
           echo $row["Quantity"]. " " .$row["Description"]. " " ;
           echo $total;
           echo "<br>";
