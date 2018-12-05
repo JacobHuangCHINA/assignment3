@@ -1,6 +1,8 @@
 <?php
 $quantity = $_Post["numofitem"]
-$query = "SELECT Customers.FirstName,Customers.LastName,Purchase.CustomerID,Purchase.ProductID,Products.Description FROM Purchase,Products,Customers WHERE Purchase.Quantity > '$quantity' AND Purchase.ProductID = Products.ProductID AND Customers.CustomerID = Purchase.CustomerID;";
+echo $quantity;
+$query = 'SELECT Customers.FirstName,Customers.LastName,Purchase.CustomerID,Purchase.ProductID,Products.Description FROM Purchase,Products,Customers WHERE Purchase.Quantity > '.$quantity.' AND Purchase.ProductID = Products.ProductID AND Customers.CustomerID = Purchase.CustomerID;';
+
 $result = mysqli_query($connection,$query);
 if (!$result) {
    die("databases query failed.");
