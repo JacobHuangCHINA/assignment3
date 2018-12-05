@@ -20,8 +20,7 @@
 
         $row = mysqli_fetch_assoc($result);
           $total = $row["Cost"] * $row["Quantity"];
-          echo "<h4>Total cost is: </h4>";
-          echo $total;
+          echo "<h4>Total cost is: $total </h4>";
           echo "<br>";
           echo $row["Quantity"]. " " .$row["Description"]. " " ;
           echo $total;
