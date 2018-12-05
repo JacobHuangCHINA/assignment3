@@ -84,22 +84,10 @@ include 'getCustomers.php';
 <hr>
 <h4>Q8: Never purchase item:</h4>
 <form action="" method="post">
-  <?php
-  $query = "SELECT * FROM Products WHERE ProductID NOT IN (SELECT ProductID FROM Purchase);";
-  $result = mysqli_query($connection,$query);
-  if (!$result) {
-     die("databases query failed.");
-  }
 
-  while ($row = mysqli_fetch_assoc($result)) {
-    echo $row["Description"];
-    echo "<br>";
-  }
-  mysqli_free_result($result);
-
-   ?>
+<?php include "listneverpurchase.php" ?>
 </form>
-<!--  -->
+
 <hr>
 <h4>Q9: Show total Purchase: </h4>
 <?php include "getproduct.php" ?>
