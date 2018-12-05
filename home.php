@@ -83,10 +83,11 @@ include 'getCustomers.php';
 </form>
 <hr>
 <h4>Q8: Never purchase item:</h4>
-<form action="listneverpurchase.php" method="get">
-
+<form action="" method="get">
+  sdf
+<?php include "listneverpurchase.php" ?>
 </form>
-<!-- <?php include "listneverpurchase.php" ?> -->
+<!--  -->
 <hr>
 <h4>Q9: Show total Purchase: </h4>
 <?php include "getproduct.php" ?>
