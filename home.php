@@ -70,9 +70,15 @@ include 'getCustomers.php';
 <hr>
 <h4>Q6: Delete a Customer </h4>
 <form action="deletecustomer.php" method="post">
-  <?php include "getCustomers.php" ?>
   Choose a Customer ID number:
-  
+  <?php include "getCustomers.php" ?>
+  <input type="submit">
+</form>
+<hr>
+<h4>Q7: List Customers: </h4>
+<form action="listcustomers.php" method="post">
+  Quantity of product:
+  <input type="number" name="numofitem" min="0">
   <input type="submit">
 </form>
 <hr>
