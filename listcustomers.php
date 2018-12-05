@@ -18,7 +18,7 @@
         }
        while ($row=mysqli_fetch_assoc($result)) {
            echo '<li>';
-           echo $row["FirstName"]. " " .$row["LastName"]. " " .$row["Description"];
+           echo $row["FirstName"]. " " .$row["LastName"]. " " .$row["Description"] " " .$row["Quantity"];
         }
         mysqli_free_result($result);
        ?>

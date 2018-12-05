@@ -82,5 +82,10 @@ include 'getCustomers.php';
   <input type="submit">
 </form>
 <hr>
+<h4>Q8: Never purchase item:</h4>
+<?php include "listneverpurchase.php" ?>
+<hr>
+<h4>Q9: Show total Purchase: </h4>
+<?php include "" ?>
 </body>
 </html>
