@@ -5,6 +5,9 @@
     <title></title>
   </head>
   <body>
+    <?php
+    include 'connectdb.php';
+    ?>
     <ol>
       <?php
       $quantity= $_POST["quantity"];
@@ -20,5 +23,8 @@
         mysqli_free_result($result);
        ?>
     </ol>
+    <?php
+       mysqli_close($connection);
+    ?>
   </body>
 </html>
