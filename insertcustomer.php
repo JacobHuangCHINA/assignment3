@@ -24,11 +24,10 @@ include 'connectdb.php';
       }
     $maxid = 0;
     while ($row = mysqli_fetch_assoc($result)) {
-      if ($row["CustomerID"]>$maxid){
-        $maxid = $row["CustomerID"];
-      }
+
+        echo $row["CustomerID"];
+        echo "<br>";
     }
-    echo $maxid;
 
 
   // // get min purchase
