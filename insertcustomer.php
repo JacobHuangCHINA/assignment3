@@ -12,7 +12,7 @@ include 'connectdb.php';
    $firstName= $_POST["firstname"];
    $lastName= $_POST["lastname"];
    $phoneNumber = $_POST["phonenumber"];
-   $angentId = $_POST["agent"];
+   $angentId = $_POST["Agent"];
    $city= $_POST["city"];
 
    // increase customer ID
