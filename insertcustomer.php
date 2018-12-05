@@ -22,10 +22,10 @@ include 'connectdb.php';
      if (!$result0) {
           die("database query1 failed.");
       }
-      while ($row = mysqli_fetch_assoc($result0)) {
-        echo $row["CustomerID"];;
-      }
-      mysqli_free_result($result0);
+    $row = mysqli_fetch_assoc($result0);
+    echo $row["CustomerID"];;
+
+    mysqli_free_result($result0);
 
   // // get min purchase
   //  $query1 = 'INSERT INTO Customers VALUES ("'.$customerId.' "," "'.$firstName.' "," '. $lastName.' "," '.$city.'" "," '.$angentId.'")';
