@@ -105,7 +105,7 @@ For which customer: <br>
 include 'getCustomers.php';
 ?>
 <input type="file" name="file" id="file"><br>
-<input type="submit" value="Add New Pet">
+<input type="submit" value="Add Image">
 </form>
 <?php  mysqli_close($connection); ?>
 
